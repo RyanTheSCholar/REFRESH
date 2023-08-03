@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS refresh_db;
+CREATE DATABASE refresh_db;
