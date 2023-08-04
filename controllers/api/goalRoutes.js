@@ -5,7 +5,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const goalData = await Goal.create({
       ...req.body,
-      user_id: req.session.user_id,
+      // user_id: req.session.user_id,
 
     });
 
