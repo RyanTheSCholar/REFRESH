@@ -39,5 +39,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => 
+  console.log(`\nNow listening on port ${PORT}. Visit http://127.0.0.1:${PORT} and create an account!`));
 });
