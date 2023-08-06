@@ -1,3 +1,4 @@
+const path= require('path');
 const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers');
@@ -10,9 +11,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({helpers});
-
-
-
 
 const sess = {
   secret: 'Super secret secret',
@@ -41,5 +39,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () =>
+    console.log(`\nNow listening on port ${PORT}. Visit http://127.0.0.1:${PORT} and create an account!`));
 });
