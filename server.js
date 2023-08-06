@@ -10,8 +10,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ 
-  // helpers 
+const hbs = exphbs.create({
+  // helpers
 });
 
 
@@ -23,7 +23,7 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize
   }),
-  resave: false, 
+  resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
@@ -42,6 +42,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => 
-  console.log(`\nNow listening on port ${PORT}. Visit http://127.0.0.1:${PORT} and create an account!`));
+  app.listen(PORT, () =>
+    console.log(`\nNow listening on port ${PORT}. Visit http://127.0.0.1:${PORT} and create an account!`));
 });
