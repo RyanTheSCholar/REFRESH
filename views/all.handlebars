@@ -1,0 +1,26 @@
+<div class="titleHomepage">
+    <h1>Welcome to reFresh!</h1>
+    <p>Revitalize your mind & body!</p>
+</div>
+{{log this}}
+<div class="feed">
+    {{#each goals as |goal|}}
+    <p>"{{goal.description}}"<br>by:{{goal.user.firstName}}</p>
+    {{/each}}
+</div>
+
+{{!-- <div class="wrapper">
+    <div class="carousel">
+        {{#each goal as |goal|}}
+        <div class="carousel__item">
+            <div class="carousel__item-head">
+                
+            </div>
+            <div class="carousel__item-body">
+                <p class="title">"{{goal.description}}"</p>
+                <p>by:{{goal.user.firstName}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div> --}}
