@@ -1,11 +1,5 @@
 [
     {
-      "firstName": "Micahel",
-      "lastName": "Scott",
-      "email": "michael@hotmail.com",
-      "password": "password12345"
-    },
-    {
       "firstName": "Pam",
       "lastName": "Beesley",
       "email": "pam@gmail.com",
@@ -15,11 +9,5 @@
       "weight": 120,
       "height": 5.6,
       "activityLevel": "sedentary"
-    },
-    {
-      "firstName": "Dwight",
-      "lastName": "Shrute",
-      "email": "dwightshru@aol.com",
-      "password": "password12345"
     }
-  ]
+]

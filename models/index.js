@@ -13,6 +13,7 @@ Category.belongsTo(User,{
 
 //CATEGORY TO GOAL
 Category.hasMany(Goal, {
+  foreignKey: 'category_id',
   onDelete: 'SET NULL',
 });
 Goal.belongsTo(Category,{
