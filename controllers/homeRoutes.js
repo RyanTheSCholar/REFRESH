@@ -4,40 +4,7 @@ const { Category, Goal, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // router.get('/' async )
-router.get('/:category?', async (req, res) => {
-  try {
-    if(req.params.category){
-      const goalsData = await Category.findOne(req.params.category, {
-        include: [
-          {
-            model: Goal
-          },
-        ],
-      });
-      const goals = goalsData.map((goals) => goals.get({plain: true}));
-      res.render('all', {
-        goals,
-        logged_in: req.session.logged_in
-      });
-    }else{
-      const goalsData = await Goal.findAll({
-        include: [
-          {
-            model: User,//CHECK
-          }
-        ]
-      });
-      const goals = goalsData.map((goals) => goals.get({plain: true}));
-      res.render('all', {
-        goals,
-        logged_in: req.session.logged_in
-      });
-    }
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+
 
 
 
@@ -73,6 +40,41 @@ router.get('/signup', (req, res) => {
     return;
   }
   res.render('signup');
+});
+
+router.get('/:category?', async (req, res) => {
+  try {
+    if(req.params.category){
+      const goalsData = await Category.findOne(req.params.category, {
+        include: [
+          {
+            model: Goal
+          },
+        ],
+      });
+      const goals = goalsData.map((goals) => goals.get({plain: true}));
+      res.render('all', {
+        goals,
+        logged_in: req.session.logged_in
+      });
+    }else{
+      const goalsData = await Goal.findAll({
+        include: [
+          {
+            model: User,//CHECK
+          }
+        ]
+      });
+      const goals = goalsData.map((goals) => goals.get({plain: true}));
+      res.render('all', {
+        goals,
+        logged_in: req.session.logged_in
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
