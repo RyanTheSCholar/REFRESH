@@ -3,7 +3,8 @@ const router = require('express').Router();
 const { Category, Goal, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/:category', async (req, res) => {
+router.get('/:category?', async (req, res) => {
+  console.log('hello world');
   try {
     if(req.params.category){
       const goalsData = await Category.findOne(req.params.category, {
