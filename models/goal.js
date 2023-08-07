@@ -43,4 +43,5 @@ Goal.init (
     modelName: 'goal',
   }
 );
+
 module.exports = Goal;
