@@ -9,5 +9,52 @@
       "weight": 120,
       "height": 5.6,
       "activityLevel": "sedentary"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Scott",
+      "email": "mikescott@gmail.com",
+      "password": "password1234",
+      "gender": "female",
+      "age": 32,
+      "weight": 120,
+      "height": 5.6,
+      "activityLevel": "sedentary"
+    },
+
+    {
+      "firstName": "Beau",
+      "lastName": "Russell",
+      "email": "brussell1@gmail.com",
+      "password": "password123",
+      "gender": "male",
+      "age": 28,
+      "weight": 180,
+      "height": 6.0,
+      "activityLevel": "moderate"
+    },
+    {
+      "firstName": "Jeanette",
+      "lastName": "Manning",
+      "email": "jeanman1@gmail.com",
+      "password": "password12ab",
+      "gender": "female",
+      "age": 60,
+      "weight": 170,
+      "height": 5.7,
+      "activityLevel": "light"
+    },
+    {
+      "firstName": "Magnolia",
+      "lastName": "Kroger",
+      "email": "magkroger@gmail.com",
+      "password": "password12abc",
+      "gender": "female",
+      "age": 18,
+      "weight": 125,
+      "height": 5.2,
+      "activityLevel": "high"
     }
+
 ]
+   
