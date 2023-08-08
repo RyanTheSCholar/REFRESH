@@ -5,9 +5,6 @@ const withAuth = require('../utils/auth');
 
 // router.get('/' async )
 
-
-
-
 router.get('/profile', withAuth, async(req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id,{
