@@ -5,78 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refresh</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-steps@2.2.1/dist/css/bulma-steps.min.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/feed.css">
     <link rel="stylesheet" href="/css/style.css">
     
-
 <body>
     <div class="hero-image">
-
-    </div>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false"
-                    id="nav-bar">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div class="navbar-menu" id="navMenu">
-                <!-- navbar-start, navbar-end... -->
-                <div class="navbar-start">
-                    <a class="navbar-item" href="/">Home</a>
-                    <a class="navbar-item" href="">About us</a>
-                    <a class="navbar-item" href="/signup">Sign up</a>
-                    {{#if logged_in}}
-                    <a class="navbar-item" href="/profile">Profile</a> 
-                    <button class="no-button" id="logout">Logout</button>
-                    {{else}}
-                    <a class="navbar-item" href="/login">Login</a>
-                    {{/if}}
-                    {{!-- <a class="navbar-item" href="/login">Login</a> --}}
-                    {{!-- <a class="navbar-item" href="/profile">Goals</a> --}}
+        
+    </div>    
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false"
+                        id="nav-bar">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
                 </div>
-            </div>
-            <!-- navbar items, navbar burger... -->
-        </nav>
-    </header>
-    <main class="container container-fluid mt-5">
 
-        <!-- Render the sub layout -->
-        {{{ body }}}
-    </main>
-    
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
+                <div class="navbar-menu" id="navMenu">
+                    <!-- navbar-start, navbar-end... -->
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="/">Home</a>
+                        <a class="navbar-item" href="">About us</a>
+                        {{#unless logged_in}}
+                        <a class="navbar-item" href="/login">Login</a>
+                        {{/unless}}
+                        {{#if logged_in}}
+                        <a class="navbar-item" id="logout" href="#">Logout</a>
+                        {{/if}}
+                        {{#unless logged_in}}
+                        <a class="navbar-item" href="/signup">Sign up</a>
+                        {{/unless}}
+                        {{#if logged_in}}
+                        <a class="navbar-item" href="/profile">Goals</a>
+                        {{/if}}
+                    </div>
+                </div>
+                <!-- navbar items, navbar burger... -->
+            </nav>
+        </header>
+        <main class="container container-fluid mt-5">
+
+            <!-- Render the sub layout -->
+            {{{ body }}}
+        </main>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bulma-steps@2.2.1/dist/js/bulma-steps.js"></script>
-<script src="/js/signup.js"></script>
+
 
 </html>
-
-
-
-{{!-- <!-- Conditionally render login or logout links -->
-{{#if logged_in}}
-<a href="/profile">profile</a> |
-<button class="no-button" id="logout">logout</button>
-{{else}}
-<a href="/login">login</a>
-{{/if}}
-
-{{!-- <img src="assets/heroIMG2.jpg" alt="hero image" height="100%"> --}} {{!-- <a href="/">Welcome to reFresh!</a>
---}}
-
-</footer>
-<!-- Render script for logged in users only -->
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}
