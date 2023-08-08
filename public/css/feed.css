@@ -34,8 +34,11 @@ body{
     animation-delay: calc(3s * var(--delay));
 }
 
-.wrapper:hover .card {
+.wrapper:hover .card{
     animation-play-state: paused;
+}
+.wrapper:not(:hover) .card{
+    animation-play-state: running;
 }
 
 
