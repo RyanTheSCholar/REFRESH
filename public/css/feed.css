@@ -21,6 +21,7 @@ body{
 .wrapper .card{
     background: #fff;
     width: 430px;
+    height: 150px;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -33,8 +34,11 @@ body{
     animation-delay: calc(3s * var(--delay));
 }
 
-.wrapper:hover .card {
+.wrapper:hover .card{
     animation-play-state: paused;
+}
+.wrapper:not(:hover) .card{
+    animation-play-state: running;
 }
 
 
