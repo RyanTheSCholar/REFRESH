@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newGoal = async (event) => {
   event.preventDefault();
 
   const categoryName = document.querySelector('#category-name').value.trim();
@@ -13,6 +13,7 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
+    console.log(response);
 
     if (response.ok) {
       document.location.replace('/profile');
@@ -22,5 +23,20 @@ const newFormHandler = async (event) => {
   }
 };
 document
-  .querySelector('.new-goal-form')
-  .addEventListener('submit', newFormHandler);
+  .getElementById('goalSubmit')
+  .addEventListener('click', newGoal);
+
+// (event) => {
+//   const dropdown = document.getElementById('dropdown');
+//   const selectedValue = document.getElementById('selected-value');
+//   console.log(selectedValue);
+//   // Listen for the "change" event on the dropdown
+//   dropdown.addEventListener('change', function () {
+//     const selectedOption = dropdown.options[dropdown.selectedIndex];
+//     const value = selectedOption.value;
+//     const text = selectedOption.text;
+
+//     selectedValue.textContent = 'Selected value: ' + text + ' (' + value + ')';
+//   });
+//   event.preventDefault();
+// };

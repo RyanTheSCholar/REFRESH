@@ -30,9 +30,18 @@
                     <div class="navbar-start">
                         <a class="navbar-item" href="/">Home</a>
                         <a class="navbar-item" href="">About us</a>
+                        {{#unless logged_in}}
                         <a class="navbar-item" href="/login">Login</a>
+                        {{/unless}}
+                        {{#if logged_in}}
+                        <a class="navbar-item" id="logout" href="#">Logout</a>
+                        {{/if}}
+                        {{#unless logged_in}}
                         <a class="navbar-item" href="/signup">Sign up</a>
+                        {{/unless}}
+                        {{#if logged_in}}
                         <a class="navbar-item" href="/profile">Goals</a>
+                        {{/if}}
                     </div>
                 </div>
                 <!-- navbar items, navbar burger... -->
@@ -46,25 +55,6 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bulma-steps@2.2.1/dist/js/bulma-steps.js"></script>
-<script src="/js/signup.js"></script>
+
 
 </html>
-
-
-
-{{!-- <!-- Conditionally render login or logout links -->
-{{#if logged_in}}
-<a href="/profile">profile</a> |
-<button class="no-button" id="logout">logout</button>
-{{else}}
-<a href="/login">login</a>
-{{/if}}
-
-{{!-- <img src="assets/heroIMG2.jpg" alt="hero image" height="100%"> --}} {{!-- <a href="/">Welcome to reFresh!</a>
---}}
-
-</footer>
-<!-- Render script for logged in users only -->
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}

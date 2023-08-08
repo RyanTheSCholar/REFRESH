@@ -17,15 +17,51 @@
     transform: translate(-50%, -50%);
 }
 
-.hero-image > h1
-{
+.hero-image>h1 {
     color: red;
     font-size: 30px;
 }
 
+.card {
+    box-sizing: content-box;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    box-shadow: 15px 10px 10px 0px rgba(10, 10, 10,10 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 200vh;
+}
 
-@media screen and (max-width: 1023px) 
+/* targeting "Login" text at top of card */
+.card-title 
 {
+    color:aqua;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+.form-group > label
+{
+    color: aqua;
+}
+
+@media screen and (max-width: 1023px) {
     * {
         box-sizing: border-box;
         margin: 0;
@@ -89,26 +125,22 @@
     }
 }
 
-.navbar
-{
+.navbar {
     background: none;
 
 }
 
-.navbar-item 
-{
+.navbar-item {
     padding: 5% 50% 0% 20% !important;
     color: hsla(240, 100%, 86%, .5);
 }
 
-a.navbar-item:hover
-{
+a.navbar-item:hover {
     background: none !important;
     color: blueviolet !important;
 }
 
-.titleHomepage
-{
+.titleHomepage {
     display: flex;
     flex-direction: column;
     font-size: 44px;
@@ -119,7 +151,12 @@ a.navbar-item:hover
     padding-top: 20%;
 }
 
-p
-{
+p {
     color: hsla(0, 90%, 42%, 1) !important;
+}
+
+.login
+{
+    width:75px;
+
 }
