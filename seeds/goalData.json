@@ -1,13 +1,35 @@
 [
   {
-    "name":"testName",
-    "description":"TESTDESCRIPTION",
-    "user_id":1
+    "name":"Get my mind ready",
+    "description":" Find 2 self-care activities and engage in one of the two activities at least once a week for one month.",
+    "user_id":1,
+    "category_id": 1
     
   },
   {
-    "name":"nameTEST",
+    "name":"Dealing with stress",
+    "description":"I will create a list of at least 2 coping skills to use when feeling stressed or overwhelmed. I will keep track of how useful these coping skills were for 2 months.",
+    "user_id":2,
+    "category_id": 1
+  },
+  {
+    "name":"Practice mindfulness",
+    "description":"I will practice breathing exercises for 2 minutes at least 3 times a week for three weeks.",
+    "user_id":4,
+    "category_id": 3
+    
+  },
+  {
+    "name":"Ready2workout",
     "description":"ALSO TESTDESCRIPTION",
-    "user_id":1
+    "user_id":3,
+    "category_id": 2
+  },
+  {
+    "name":"Gratitude",
+    "description":"List 3 things I am grateful/thankful for daily for one month.",
+    "user_id":5,
+    "category_id": 3
+    
   }
 ]
