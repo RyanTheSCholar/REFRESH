@@ -153,12 +153,16 @@ a.navbar-item:hover {
     padding-top: 20%;
 }
 
+/* p {
+    color: hsla(0, 90%, 42%, 1) !important;
+} */
+
 .login {
     width: 75px;
 }
 
 p {
-    color: hsla(240, 100%, 86%, 1);
+    color: #33ACFF;
 }
 
 .titleProfile{

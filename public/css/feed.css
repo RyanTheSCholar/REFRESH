@@ -111,4 +111,6 @@ body{
     border-radius: 25px;
     color: #fff;
     background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+    width: 100px;
+    height: 70px;
 }
