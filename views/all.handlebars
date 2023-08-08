@@ -4,19 +4,20 @@
 </div>
 {{log this}}
 <div class="feed">
-    {{#each goals as |goal|}}
+    {{!-- {{#each goals as |goal|}}
     <p>"{{goal.description}}"<br>by:{{goal.user.firstName}}</p>
-    {{/each}}
+    {{/each}} --}}
 </div>
 
 <body>
+    {{log this}}
  <div class="wrapper">
         <div class="card" style="--delay: -1;">
             <div class="content">
                 <div class="img"><img src="" alt=""></div>
                 <div class="details">
-                    <span class="name">Mind</span>
-                    <p>Goal goes here #1</p>
+                    <span class="name">{{goals.[0].name}}</span>
+                    <p>{{goals.[0].description}}</p>
                 </div>
             </div>
             <a href="/signup">Sign Up</a>
@@ -25,8 +26,8 @@
             <div class="content">
                 <div class="img"><img src="" alt=""></div>
                 <div class="details">
-                    <span class="name">Mind</span>
-                    <p>Goal goes here #2</p>
+                    <span class="name">{{goals.[1].name}}</span>
+                    <p>{{goals.[1].description}}</p>
                 </div>
             </div>
             <a href="/signup">Sign Up</a>
@@ -35,8 +36,8 @@
             <div class="content">
                 <div class="img"><img src="" alt=""></div>
                 <div class="details">
-                    <span class="name">Body</span>
-                    <p>Goal goes here #3</p>
+                    <span class="name">{{goals.[2].name}}</span>
+                    <p>{{goals.[2].description}}</p>
                 </div>
             </div>
             <a href="/signup">Sign Up</a>
@@ -45,8 +46,8 @@
             <div class="content">
                 <div class="img"><img src="" alt=""></div>
                 <div class="details">
-                    <span class="name">Body</span>
-                    <p>Goal goes here #4</p>
+                    <span class="name">{{goals.[3].name}}</span>
+                    <p>{{goals.[3].description}}</p>
                 </div>
             </div>
             <a href="/signup">Sign up</a>
@@ -55,15 +56,14 @@
             <div class="content">
                 <div class="img"><img src="" alt=""></div>
                 <div class="details">
-                    <span class="name">Spirit</span>
-                    <p>Goal goes here #5</p>
+                    <span class="name">{{goals.[4].name}}</span>
+                    <p>{{goals.[4].description}}</p>
                 </div>
             </div>
             <a href="/signup">SIgn up</a>
         </div>
     </div>
 </body>
-
 {{!-- <div class="wrapper">
     <div class="carousel">
         {{#each goal as |goal|}}
