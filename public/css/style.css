@@ -98,7 +98,7 @@
 .navbar-item 
 {
     padding: 5% 50% 0% 20% !important;
-    color: hsla(240, 100%, 86%, .5);
+    color: hsla(240, 100%, 86%, 1);
 }
 
 a.navbar-item:hover
@@ -118,8 +118,75 @@ a.navbar-item:hover
     padding-left: 55%;
     padding-top: 20%;
 }
-
-p
-{
-    color: hsla(0, 90%, 42%, 1) !important;
+p{
+    color: hsla(240, 100%, 86%, 1);
+}
+.steps{
+    display: flex !important;
+    width: 1000px;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 auto !important;
+}
+/* .steps-actions{
+    flex-wrap: nowrap;
+} */
+.control > input{
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1%;
+    background-color: hsla(240, 21%, 86%, .5);
+    border: none;
+}
+.field-label{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.label{
+    color: hsla(240, 100%, 86%, .5);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100px;
+}
+.field{
+    width: 600px;
+    white-space: nowrap;
+}
+.steps .steps-content .step-content.is-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+}
+.control > select{
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1%;
+}
+.title{
+    color: hsla(240, 100%, 86%, .5);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    position: absolute;
+    left: 530px;
+}
+#submit-button{
+   position: absolute;
+   top: 135px;
+   left: 800px;
+}
+#activity{
+background-color: hsla(240, 21%, 86%, .5);
+}
+#gender{
+    background-color: hsla(240, 21%, 86%, .5);
 }
