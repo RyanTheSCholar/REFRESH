@@ -167,9 +167,9 @@ p {
     padding-bottom: 10px;
     margin-top:-20%;
 }
-/* .activeGoals{
-    
-} */
+.activeGoals.titleProfile{
+ justify-content: center;   
+}
 
 .profileWrapper {
     display: flex;
