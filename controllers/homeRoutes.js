@@ -43,6 +43,11 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/about', (req,res)=> {
+  res.render('about');
+  return;
+});
+
 router.get('/:category?', async (req, res) => {
   try {
     if(req.params.category){

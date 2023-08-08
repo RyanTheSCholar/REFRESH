@@ -17,18 +17,15 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-
-  const goal = await Goal.bulkCreate(goalData, {
-    individualHooks: true,
-    returning: true,
-  });
-
   const category = await Category.bulkCreate(categoryData, {
     individualHooks: true,
     returning: true,
   });
 
-
+  const goal = await Goal.bulkCreate(goalData, {
+    individualHooks: true,
+    returning: true,
+  });
 
   process.exit(0);
 };
