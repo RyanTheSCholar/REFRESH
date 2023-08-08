@@ -1,18 +1,26 @@
 const router = require('express').Router();
-const { Goal } = require('../../models');
+const { Goal, Category } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
+    console.log(req.body);
+    const category = await Category.findOne({
+      where: {
+        name: req.body.categoryName
+      }
+    });
+    console.log(category);
     const goalData = await Goal.create({
-      ...req.body,
-      // user_id: req.session.user_id,
-
+      name:req.body.goalName,
+      description: req.body.description,
+      user_id: req.session.user_id,
+      category_id: category.id,
     });
 
     res.status(200).json(goalData);
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(400).json(err);
   }
 });

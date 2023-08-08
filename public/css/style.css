@@ -25,8 +25,8 @@
 .card {
     box-sizing: content-box;
     background-color: rgba(255, 255, 255, 0.25);
-    /* padding: 20px; */
-    /* border-radius: 10px; */
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 15px 10px 10px 0px rgba(10, 10, 10, 10);
     display: flex;
     justify-content: center;
@@ -153,10 +153,6 @@ a.navbar-item:hover {
     padding-top: 20%;
 }
 
-p {
-    color: hsla(0, 90%, 42%, 1) !important;
-}
-
 .login {
     width: 75px;
 }
@@ -164,6 +160,25 @@ p {
 p {
     color: hsla(240, 100%, 86%, 1);
 }
+
+.titleProfile{
+    font-size: 45px !important;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-top:-20%;
+}
+/* .activeGoals{
+    
+} */
+
+.profileWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .steps {
     display: flex !important;
