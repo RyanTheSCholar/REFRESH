@@ -244,3 +244,37 @@ p {
 #gender {
     background-color: hsla(240, 21%, 86%, .5);
 }
+
+.about-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutSec {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 481px;
+backdrop-filter: blur(5px);
+box-shadow: 20px 11px 20px 10px rgba(41, 41, 10, 41);
+/* background-color: hsla(240, 100%, 86%, .8) !important;
+border: 15px solid hsla(240, 100%, 86%, .5); ; */
+padding: 50px;
+margin: 38px;
+color: white;
+border-radius: 15px;
+}
+
+.addAbout > h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: 'Kranky', cursive;
+    /* font-family: 'Crafty Girls', cursive; */
+}
+
+.addAbout {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
