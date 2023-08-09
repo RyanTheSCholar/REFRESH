@@ -13,9 +13,14 @@ body{
 
 .wrapper{
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: baseline;
+    justify-content: flex-start;
     height: 30vh;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: -50px;
+    margin-top: -150px;
 }
 
 .wrapper .card{
