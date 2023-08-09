@@ -18,7 +18,7 @@ There are so many apps out there that focus on just fitness or just the mind. We
 Our application is a great tool for someone to garner the daily motivation needed to accomplish your everyday goals that they might struggle with.
 
 # Contributions
-
+Vertical carousel credit: CodingNepal- https://www.youtube.com/watch?v=Gd7T5_3tjYQ
 
 ## License
 None (please use responsibly ;)
