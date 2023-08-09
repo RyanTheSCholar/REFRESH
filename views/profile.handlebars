@@ -5,17 +5,24 @@
       <h2 class="titleProfile">{{firstName}}, you have {{goals.length}} goals active!
       </h2>
 
+
+
       <div class="activeGoals">
         {{#each goals as |goal|}}
-        <p>"{{goal.name}}"<br>{{goal.description}}</p><br>
+        <p style="color: azure">{{goal.name}}<br>"{{goal.description}}"</p><br>
         {{/each}}
       </div>
+
+      <div class="tdee">
+        <h2>Recommended</h2>  
+        <h2>Calories:{{userTDEE}}</h2> 
+      </div> 
+
       <br><br><br><br>
-      <div class="profileWrapper"></div>
-      <h2 class="card-title">Add your goal!</h2>
-      {{userTDEE}}
-        
-<select class="dropdown" id="category-name">
+      <div class="profileWrapper">
+      <h2 class="card-title"id="txt">Add your goal!</h2>
+
+<select class="dropdown is-active dropdown-divider " id="category-name">
     <option value="mind">Mind</option>
     <option value="body">Body</option>
     <option value="spirit">Spirit</option>
@@ -33,6 +40,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 
