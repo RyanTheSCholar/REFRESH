@@ -45,13 +45,21 @@
     align-items: center;
     height: 85vh;
     width: 200vh;
+    backdrop-filter: blur(5px);
 }
 
 /* targeting "Login" text at top of card */
-.card-title {
+/* .card-title {
     color: aqua;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 230%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: flex-end;
+    width: 82%;
+} */
+.card-body{
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-primary {
@@ -70,11 +78,31 @@
     background-color: #0056b3;
     /* Darker shade on hover */
 }
-
+.login-form{
+    width: 25vw;
+    height: 25vh;
+    font-family: 'Martian Mono', monospace !important;
+}
 .form-group>label {
     color: aqua;
 }
-
+.form-input{
+    border:3px solid white;
+    border-radius: 3px;
+    height: 40%;
+}
+#transparentLogo{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+#logoContainer{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
 @media screen and (max-width: 1023px) {
     * {
         box-sizing: border-box;
@@ -182,9 +210,31 @@ a.navbar-item:hover {
 /* p {
     color: hsla(0, 90%, 42%, 1) !important;
 } */
-
-.login {
-    width: 75px;
+.form-group{
+    display: flex !important;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+.form-submit{
+    display: flex;
+    justify-content:flex-end;
+    width: 82%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.login{
+    width: 70px;
+    text-align: left;
+    font-family: 'Martian Mono', monospace !important;
+}
+#loginSubmit{
+    display: flex !important;
+    justify-content: flex-end !important;
+    font-family: 'Martian Mono', monospace !important;
 }
 
 .tdee {
@@ -278,9 +328,13 @@ p {
 .steps {
     display: flex !important;
     width: 1000px;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0 auto !important;
+    border-radius: 15px;
+    box-shadow: 20px 11px 20px 10px rgba(41, 41, 10, 41);
+    backdrop-filter: blur(5px);
+    height: 500px;
 }
 
 /* .steps-actions{
@@ -292,7 +346,7 @@ p {
     justify-content: center;
     align-items: flex-start;
     padding-top: 1%;
-    background-color: hsla(240, 21%, 86%, 1);
+    background-color: azure;
     border: none;
 }
 
@@ -304,7 +358,7 @@ p {
 }
 
 .label {
-    color: hsla(240, 100%, 86%, .5);
+    color: #33ACFF;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -340,15 +394,16 @@ p {
     position: absolute;
     left: 530px;
 }
-
 #submit-button {
     position: absolute;
     top: 135px;
     left: 800px;
 }
-
+.steps .steps-actions .steps-action{
+    justify-content:space-evenly ;
+}
 #activity {
-    background-color: hsla(240, 21%, 86%, .5);
+    background-color: azure;
 }
 
 #gender {
